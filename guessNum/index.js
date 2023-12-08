@@ -42,10 +42,9 @@ function validateGuess(guess){
         prevGuess.push(guess)
         console.log(prevGuess)
 
-        if(numGuess === 11){
+        if(numGuess == 10){
             displayGuess(guess)
             displayMessage(`Game over .Random number was ${randomNum}`)   
-            
             endGame()
         }else{
             displayGuess(guess)
@@ -60,7 +59,7 @@ function displayGuess(guess){
     userInput.value ='';
     
     guessSlot.innerHTML += `${guess} |`;
-    numGuess++;
+    numGuess = numGuess + 1;
     remaining.innerHTML = `${11 - numGuess}`
 
 }
@@ -87,11 +86,11 @@ function displayMessage(message){
 
 function endGame(){
     userInput.value = ''
+    submit.remove()
     userInput.setAttribute('disable','')
     p.classList.add('button')
     startOver.appendChild(p)
-    p.innerHTML =`<h2 id = "newGame"> Start a New Game </h2>`
-    
+    p.innerHTML = `<h2 id = "newGame"> Start a New Game </h2>`
     playGame = false
     newGame()
 
@@ -99,7 +98,7 @@ function endGame(){
 
 function newGame(){
     const newGameButton = document.querySelector('#newGame')
-    newGameButton.addEventListener('click',(event)=>{
+    newGameButton.addEventListener('click',()=>{
 
         randomNum =parseInt(Math.random()*100 + 1)
         prevGuess = []
