@@ -71,4 +71,8 @@
     padding: 10px 20px;
     cursor: pointer;
   }
+  tr{
+    display:flex;
+    justify-content: space-around;
+  }
   
