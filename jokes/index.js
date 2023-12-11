@@ -6,26 +6,29 @@ const btn = document.querySelector('#getJoke');
 
 
 
-// btn.addEventListener('click', (e) => {
-//   e.preventDefault()
-//   let  movies ;
-//    (
-//     async()=>{
-   
-//     const response = await fetch(url);
-//      movies =  await response.json();
-//      joke.textContent =movies.value;
-//     }
-//     )()
+btn.addEventListener('click', (e) => {
+  e.preventDefault()
+  let  movies ;
+  let a ;
+   (
+    async()=>{
+        a = 89
+    const response = await fetch(url);
+     movies =  await response.json();
+     joke.textContent = movies.value;
+     
+    }
+    )()
  
-  
-// });
+  console.log(movies)
+  console.log(a)
+});
 
-let xhr = new XMLHttpRequest();
+// let xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://api.chucknorris.io/jokes/random',true)
-// handle this end point with promises
-xhr.onload=function(){
+// xhr.open('GET', 'https://api.chucknorris.io/jokes/random',true)
+// // handle this end point with promises
+// xhr.onload=function(){
   
-}
+// }
 // handle the case of race condition
