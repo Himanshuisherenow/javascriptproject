@@ -22,6 +22,8 @@ btn.addEventListener('click', function (e) {
     // Create a new entry
     const newEntry = document.createElement('tr');
     
+    localStorage.setItem("user-1",JSON.stringify(info))
+
       newEntry.innerHTML += `<th>${info.title}</th>`;
       newEntry.innerHTML += `<th>${info.author}</th>`;
       newEntry.innerHTML += `<th>${info.year}</th>`;
