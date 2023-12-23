@@ -22,12 +22,12 @@ function type() {
 
     if (charIndex === 0) {
       isTyping = true;
-      wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-      setTimeout(type, 500); // Wait for half a second before typing again
+      wordIndex = (wordIndex + 1) % words.length; 
+      setTimeout(type, 500); 
     }
   }
 
-  setTimeout(type, 100); // Type one character every 100 milliseconds
+  setTimeout(type, 100); 
 }
 
 function erase() {
@@ -36,7 +36,7 @@ function erase() {
 
   if (charIndex === 0) {
     isTyping = true;
-    wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+    wordIndex = (wordIndex + 1) % words.length; 
     setTimeout(type, 500); // Wait for half a second before typing again
   } else {
     setTimeout(erase, 100); // Erase one character every 100 milliseconds
